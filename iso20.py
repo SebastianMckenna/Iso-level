@@ -41,7 +41,7 @@ plt.show()
 level=xr.DataArray(np.zeros((len(ocean.time), len(ocean.lon), len(ocean.lat))), dims=['time','lon','lat'], coords={'time': ocean.time, 'lon': ocean.lon, 'lat': ocean.lat})
 level[:]=np.nan
 
-#run the same loop but at all points
+#run the same loop but at all points - this does not work and gives an error
 for i, t, in enumerate (ocean.thetao.time):
     print (i, t.values)
     OV=ocean.thetao[i,:,:,:]
